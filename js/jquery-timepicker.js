@@ -1,7 +1,10 @@
 ﻿/**
- * @author  likaifei
+ *
+ * @author  李凯飞
  *
  * 描述：选择时间组件，先选择小时再选择分钟，只支持00-23小时、00-05-10...50-55分钟。回调函数的e为源对象。
+ *
+ * 示例如下：
  *
  * $("#timePicker").hunterTimePicker();
  *
@@ -33,7 +36,7 @@
 		box.click(function(event){
 			event.preventDefault();
 			event.stopPropagation();
-			template.remove();
+			$('.Hunter-time-picker').remove();
 			var _this = $(this);
 			var offset = _this.offset();
 			var top = offset.top + _this.outerHeight() + 15;
@@ -108,6 +111,8 @@
 					box.val(hourValue+":00");
 				}
 				buildMinuteTpl(_this);
+				
+				if(options.callback) options.callback(box);
 
 				return false;
 			});

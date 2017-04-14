@@ -11,13 +11,19 @@
 <script type="text/javascript" src="js/jquery-timepicker.js"></script>
 <script>
 	$().ready(function(e) {
+//		var timePicker = new HunterTimePicker({
+//			target: '#timeChoice1'
+//		});
+//		timePicker.init();
 
-		$('#timePicker').hunterTimePicker({
-			callback: function(e){
-				alert(e.val());
-			}
-		});
-		
+//		$(".time-picker").show(function () {
+//			var timePicker = new HunterTimePicker({
+//			target: $(this)
+//			});
+//			timePicker.init();
+//		});
+
+		$("#timePicker").hunterTimePicker();
 		$(".time-picker").hunterTimePicker();
 	});
 </script>
