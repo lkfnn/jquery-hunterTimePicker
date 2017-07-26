@@ -3,7 +3,7 @@
  *
  * var timePicker = new HunterTimePicker({
  *	  target: '#targetID',		   目标元素ID（如：文本框，该值为选择的时间）
- *	  callback: function(value){   回调函数，选择城市后调用，Time_id为选择的城市的ID
+ *	  callback: function(value){   回调函数
  *		  alert(value);
  *	  }
  * });
